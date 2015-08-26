@@ -4,7 +4,6 @@ fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, 
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
-    /*border: 1px solid black;*/
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -18,3 +17,5 @@ figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, su
 #header ul .logo{width: 100px;height: 60px;background-color: #ffffff;}
 
 #main #slider{width: 100%;height: 600px;background: url("/images/bg.jpg") 0 0 no-repeat;background-size: cover;}
+
+#main #content ul li{float:left;}
