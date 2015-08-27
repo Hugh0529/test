@@ -1,11 +1,9 @@
 <%- include header %>
 
-<div id="slider"></div>
-
 <div id="content">
     <ul>
         <% for(var i = 0; i<data.length; i++) { %>
-        <li><%= data[i].src %></li>
+        <li><img src=" <%= data[i].src %> " alt=""/><div class="vertical"></div></li>
         <% } %>
     </ul>
 </div>
