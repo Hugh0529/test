@@ -1,22 +1,30 @@
 /**
  * Created by chy on 15-8-21.
  */
-var mysqlPool = require("../model/util/mysqlPool");
+var async = require('async');
+var poolConn = require("../model/util/mysqlPool");
+var User = require("../model/User");
 var testQuery = {};
 
-var getUser = function(conn, serviceFunction) {
+testQuery.getUser = function (param, callback) {
     var sql = "select * from test9.user limit 10";
-    var getUserRes;
-    conn.query(sql, function(err, res) {
+    async.waterfall([
+        function(_callback) {
+            poolConn(function(err, conn) {
+                _callback(err, conn);
+            });
+        },
+        function (conn, _callback) {
+            conn.query(sql, function (err, res) {
+                callback(res);
+                _callback(err, res, conn);
+            });
+        }
+    ], function(err, result, conn) {
+        conn.release();
         if(err) {
-            console.log("getUser ==> " + err);
-        }else {
-            console.log('The query solution is: ', res);
-            getUserRes = res;
+            console.log(err);
         }
     });
-    return getUserRes;
 };
-testQuery.getUser = mysqlPool(getUser);
-
 module.exports = testQuery;

@@ -2,6 +2,7 @@
  * Created by chy on 15-8-20.
  */
 var mysql = require('mysql');
+var async = require('async');
 var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
@@ -10,14 +11,10 @@ var pool = mysql.createPool({
     port: 3306
 });
 
-var createConn = function (queryFunction) {
-    pool.getConnection(function (err, conn) {
-        if (!err) {
-            queryFunction(conn);
-            conn.release();
-        } else {
-            console.log("POOL ==> " + err);
-        }
+function createConn(callback) {
+    pool.getConnection(function(err, conn) {
+        callback(err, conn);
     });
 };
+
 module.exports = createConn;
