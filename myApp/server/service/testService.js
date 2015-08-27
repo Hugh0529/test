@@ -10,7 +10,7 @@ testService.getUser = function (param, callback) {
         function(_callback) {
             //console.log('start');
             testQuery.getUser(null, function(res) {
-                //console.log('result --- ' + res);
+                //console.log('result --- ' + res[0].name + ' ' + res[1].name);
                 _callback(null, res);
             });
         },
@@ -26,6 +26,7 @@ testService.getUser = function (param, callback) {
         }
     });
 };
-testService.getUser(null, function(){});
+// 测试
+//testService.getUser(null, function(){});
 
 module.exports = testService;
