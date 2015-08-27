@@ -21,7 +21,9 @@ testQuery.getUser = function (param, callback) {
             });
         }
     ], function(err, result, conn) {
-        conn.release();
+        // do something
+        //conn.release();
+        //console.log('1.has released');
         if(err) {
             console.log(err);
         }

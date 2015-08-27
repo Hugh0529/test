@@ -12,8 +12,19 @@ var pool = mysql.createPool({
 });
 
 function createConn(callback) {
-    pool.getConnection(function(err, conn) {
-        callback(err, conn);
+    async.waterfall([
+       function(_callback) {
+           pool.getConnection(function(err, conn) {
+               callback(err, conn);
+               _callback(err, conn);
+           });
+       }
+    ],function(err, conn) {
+        conn.release();
+        if(err) {
+            console.log(err);
+        }
+        //console.log('2.has released');
     });
 };
 
