@@ -4,7 +4,9 @@
 
 <div id="content">
     <ul>
-
+        <% for(var i = 0; i<data.length; i++) { %>
+        <li><%= data[i].src %></li>
+        <% } %>
     </ul>
 </div>
 
