@@ -7,7 +7,7 @@ function User(user) {
         username,
         password,
         email,
-        registerDateTime = new Date(),
+        registerDateTime,
         lastLoginDateTime,
         token;
 

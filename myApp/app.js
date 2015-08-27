@@ -9,7 +9,7 @@ var flash = require('connect-flash');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
-var db = require('./server/model/util/mysqlPool');
+var toObject = (require("./server/model/util/toObject"))();
 
 var app = express();
 
