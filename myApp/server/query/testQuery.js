@@ -31,5 +31,5 @@ testQuery.getUser = function (param, callback) {
     });
 };
 // 测试
-testQuery.getUser(null, function(){});
+//testQuery.getUser(null, function(){});
 module.exports = testQuery;

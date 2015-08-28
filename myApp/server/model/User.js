@@ -2,23 +2,14 @@
  * Created by chy on 15-8-26.
  */
 function User(user) {
-    var id,
-        name,
-        username,
-        password,
-        email,
-        registerDateTime,
-        lastLoginDateTime,
-        token;
-
-    if(user) {
-        id = user.id;
-        name = user.name;
-        username = user.username;
-        password = user.password;
-        email = user.email;
-        token = user.token;
-    }
+    var id = user?user.id : null,
+        name = user?user.name : null,
+        username = user?user.username : null,
+        password = user?user.password : null,
+        email = user?user.email : null,
+        registerDateTime = user?user.registerDateTime : null,
+        lastLoginDateTime = user?user.lastLoginDateTime : null,
+        token = user?user.token : null;
 
     return {
         getId : function() {
