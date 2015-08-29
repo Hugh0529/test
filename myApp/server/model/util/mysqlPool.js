@@ -3,12 +3,13 @@
  */
 var mysql = require('mysql');
 var async = require('async');
+var mysqlConf = require('../../../configuration').mysql;
 var pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'test9',
-    port: 3306
+    host: mysqlConf.host,
+    user: mysqlConf.user,
+    password: mysqlConf.password,
+    database: mysqlConf.database,
+    port: mysqlConf.port
 });
 // 这行在单独测试时候打开（已经在app.js里了）
 //var toObject = (require("./toObject"))();

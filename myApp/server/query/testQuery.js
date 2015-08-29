@@ -17,6 +17,7 @@ testQuery.getUser = function (param, callback) {
         function (conn, _callback) {
             conn.query(sql, function (err, res) {
                 var users = res.toObject(User);
+                //console.log(users);
                 callback(users);
                 _callback(err, users, conn);
             });
