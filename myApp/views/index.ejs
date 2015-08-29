@@ -3,9 +3,12 @@
 <div id="content">
     <ul>
         <% for(var i = 0; i<data.length; i++) { %>
-        <li><img src=" <%= data[i].src %> " alt=""/><div class="vertical"></div></li>
+        <a href=""><li><img src=" <%= data[i].src %> " alt=""/></li></a>
         <% } %>
     </ul>
+    <div class="index-vertical1"></div>
+    <div class="index-vertical2"></div>
+    <div class="index-vertical3"></div>
 </div>
 
 <%- include footer %>
