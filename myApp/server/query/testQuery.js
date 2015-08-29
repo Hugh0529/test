@@ -17,6 +17,7 @@ testQuery.getUser = function (param, callback) {
         function (conn, _callback) {
             conn.query(sql, function (err, res) {
                 var users = res.toObject(User);
+                //console.log(users);
                 callback(users);
                 _callback(err, users, conn);
             });
@@ -31,5 +32,5 @@ testQuery.getUser = function (param, callback) {
     });
 };
 // 测试
-testQuery.getUser(null, function(){});
+//testQuery.getUser(null, function(){});
 module.exports = testQuery;

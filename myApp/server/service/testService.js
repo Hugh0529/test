@@ -3,6 +3,11 @@
  */
 var testQuery = require("../query/testQuery");
 var async = require('async');
+var crypto = require('crypto'); // 生成散列值来加密
+// example
+//var md5 = crypto.createHash('md5'),;
+//var password = md5.update("123456").digest('hex');
+
 var testService = {};
 
 testService.getUser = function (param, callback) {
