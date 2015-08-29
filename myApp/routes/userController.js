@@ -5,7 +5,7 @@ var express = require('express');
 var router = express.Router();
 var userService = require("../server/service/userService");
 var async = require('async');
-var flash = require('connect-flash');
+//var flash = require('connect-flash');
 
 router.get('/login', function(req, res, next) {
     //res.render('index', { title: 'log in' });
