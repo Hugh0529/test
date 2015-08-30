@@ -11,6 +11,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var toObject = (require("./server/model/util/toObject"))();
+var addQuote = (require("./server/model/util/addQuote"))();
 
 var conf = require('./configuration');
 
