@@ -11,8 +11,9 @@ var pool = mysql.createPool({
     database: mysqlConf.database,
     port: mysqlConf.port
 });
-// 这行在单独测试时候打开（已经在app.js里了）
+// 以下在单独测试时候打开（已经在app.js里了）
 //var toObject = (require("./toObject"))();
+//var addQuote = (require("./addQuote"))();
 
 function createConn(callback) {
     async.waterfall([
