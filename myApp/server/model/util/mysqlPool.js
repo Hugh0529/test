@@ -9,11 +9,12 @@ var pool = mysql.createPool({
     user: mysqlConf.user,
     password: mysqlConf.password,
     database: mysqlConf.database,
-    port: mysqlConf.port
+    port: mysqlConf.port,
+    connectionLimit: mysqlConf.connectionLimit,
+    multipleStatements: mysqlConf.multipleStatements
 });
 // 以下在单独测试时候打开（已经在app.js里了）
-//var toObject = (require("./toObject"))();
-//var addQuote = (require("./addQuote"))();
+var toObject = (require("./toObject"))();
 
 function createConn(callback) {
     async.waterfall([

@@ -1,14 +1,18 @@
 /**
  * Created by chy on 15-8-29.
  */
-var userQuery = require("../query/userQuery");
 var async = require('async');
 var crypto = require('crypto'); // 生成散列值来加密
 var md5 = crypto.createHash('md5');
 
-var userService = {};
+var UserQuery = require("../query/UserQuery");
+var userQuery = new UserQuery();
 
-userService.login = function (req, callback) {
+var UserService = function(/*param, callback*/) {
+
+};
+
+UserService.prototype.login = function(req, callback) {
     async.waterfall([
         function(_callback) {
             userQuery.findByUsername(req.body.username, function(user) {
@@ -32,12 +36,12 @@ userService.login = function (req, callback) {
             _callback(null, user);
         }
     ], function (err, result) {
-        // do something
         if(err) {
             console.log(err);
         }
     });
 };
+
 // 测试
 //userService.login(null, function(){});
-module.exports = userService;
+module.exports = UserService;

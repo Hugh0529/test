@@ -3,8 +3,10 @@
  */
 var express = require('express');
 var router = express.Router();
-var userService = require("../server/service/userService");
 var async = require('async');
+
+var UserService = require("../server/service/UserService");
+var userService = new UserService();
 //是否需要引入待测试
 //var flash = require('connect-flash');
 
