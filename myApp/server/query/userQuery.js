@@ -3,9 +3,19 @@
  */
 var async = require('async');
 var poolConn = require("../model/util/mysqlPool");
+var baseQuery = require("./baseQuery");
 var User = require("../model/User");
 
 var userQuery = {};
+
+userQuery.find = function (_id, callback) {
+    var param = {
+        id: _id,
+        table: 'user',
+        model: User
+    };
+    baseQuery.find(param, callback);
+};
 
 userQuery.findByUsername = function (user, callback) {
     async.waterfall([
@@ -35,5 +45,5 @@ userQuery.findByUsername = function (user, callback) {
     });
 };
 // 测试
-userQuery.findByUsername(null, function(){});
+//userQuery.findByUsername(null, function(){});
 module.exports = userQuery;

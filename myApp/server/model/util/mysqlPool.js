@@ -14,7 +14,7 @@ var pool = mysql.createPool({
     multipleStatements: mysqlConf.multipleStatements
 });
 // 以下在单独测试时候打开（已经在app.js里了）
-//var toObject = (require("./toObject"))();
+var toObject = (require("./toObject"))();
 
 function createConn(callback) {
     async.waterfall([
