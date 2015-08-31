@@ -8,7 +8,6 @@ var User = require("../model/User");
 var userQuery = {};
 
 userQuery.findByUsername = function (user, callback) {
-    var sql = "select * from test9.user u where u.username = " + user.username.addQuote;
     async.waterfall([
         function(_callback) {
             poolConn(function(err, conn) {
@@ -16,6 +15,8 @@ userQuery.findByUsername = function (user, callback) {
             });
         },
         function (conn, _callback) {
+            //官方推荐，escape方法以防止sql注入
+            var sql = "select * from test9.user u where u.username = " + conn.escape(user.username);
             conn.query(sql, function (err, res) {
                 // 如果sql执行成功，没有结果的画，res为空的数组；如果sql执行失败，则res为undefined, 且返回err
                 if(err) {
@@ -34,5 +35,5 @@ userQuery.findByUsername = function (user, callback) {
     });
 };
 // 测试
-//userQuery.findByUsername(null, function(){});
+userQuery.findByUsername(null, function(){});
 module.exports = userQuery;
