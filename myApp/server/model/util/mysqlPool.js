@@ -10,7 +10,8 @@ var pool = mysql.createPool({
     password: mysqlConf.password,
     database: mysqlConf.database,
     port: mysqlConf.port,
-    connectionLimit: mysqlConf.connectionLimit
+    connectionLimit: mysqlConf.connectionLimit,
+    multipleStatements: mysqlConf.multipleStatements
 });
 // 以下在单独测试时候打开（已经在app.js里了）
 //var toObject = (require("./toObject"))();

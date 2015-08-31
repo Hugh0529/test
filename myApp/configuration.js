@@ -8,7 +8,8 @@ module.exports = {
         password: 'root',
         database: 'test9',
         port: 3306,
-        connectionLimit: 50 // 允许连接数，具体多少待测试，默认为10
+        connectionLimit: 50, // 允许连接数，具体多少待测试，默认为10
+        multipleStatements: true // 可否一个query里多个查询
     },
 
     session : {
