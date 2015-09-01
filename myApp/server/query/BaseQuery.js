@@ -10,7 +10,7 @@ var BaseQuery = function(/*param, callback*/) {
 
 BaseQuery.prototype.find = function(param, callback) {
     var sql = "SELECT * FROM ?? WHERE ?? = ?";
-    var inserts = [param.table, 'id', param.variable];
+    var inserts = [param.table, 'id', mysql.escape(param.variable)];
     sql = mysql.format(sql, inserts);
     async.waterfall([
         function(_callback) {
