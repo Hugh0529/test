@@ -61,10 +61,11 @@ UserQuery.prototype.findByUsername = function (username, callback) {
 // 测试
 //userQuery = new UserQuery();
 //var user = {
-//    id: 4,
-//    username: "test4@gmail.com",
-//    name: "test4"
+//    id: 5,
+//    username: "test5@gmail.com",
+//    name: "test5"
 //};
-//userQuery.create(user, function(){});
+//userQuery.find(1,function(){});
+userQuery.create(user, function(){});
 
 module.exports = UserQuery;
