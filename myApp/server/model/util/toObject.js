@@ -4,7 +4,7 @@
 module.exports = function() {
     if(!Array.hasOwnProperty("toObject")) {
         Array.prototype.toObject = function(T) {
-            if(this) {
+            if(this && this.length > 0) {
                 var ts = [];
                 this.forEach(function(r) {
                     var object = new T(r);
@@ -12,7 +12,7 @@ module.exports = function() {
                 });
                 return ts;
             }
-            return null;
+            return [];
         };
     }
 };
