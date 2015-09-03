@@ -104,9 +104,9 @@ module.exports = UserService;
 // 测试
 //var userService = new UserService();
 //var user = {
-//    id: 8,
-//    username: "test8@gmail.com",
-//    name: "test8"
+//    //id: 8,
+//    username: "test2@gmail.com",
+//    name: "test2"
 //};
 //userService.create(user, function(){});
 //userService.login(null, function(){});
