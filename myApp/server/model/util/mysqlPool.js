@@ -29,7 +29,7 @@ function createConn(callback) {
         if(err) {
             console.log(err);
         }
-        console.log('conn has released');
+        //console.log('conn has released');
     });
 };
 
