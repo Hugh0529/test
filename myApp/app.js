@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
+var log = require('./log');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -16,6 +17,7 @@ var toObject = (require("./server/model/util/toObject"))();
 var conf = require('./configuration');
 
 var app = express();
+log.use(app);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
