@@ -10,6 +10,8 @@ var queues = require('mysql-queues');
 var UserQuery = require("../query/UserQuery");
 var userQuery = new UserQuery();
 
+var logger = require('../../log').logger("UserService");
+
 var UserService = function(/*param, callback*/) {
 
 };

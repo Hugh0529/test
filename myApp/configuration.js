@@ -23,5 +23,16 @@ module.exports = {
         //})
         resave: false,
         saveUninitialized:true
+    },
+
+    log4js : {
+        type: "dateFile",
+        controllerFilename: "../../logs/test9.log",
+        serviceFilename: "../../logs/test9.log",
+        queryFilename: "../../logs/test9.log",
+        pattern: "-yyyy-MM-dd",
+        alwaysIncludePattern: false,
+        level: "DEBUG",
+        replaceConsole: true
     }
 };
