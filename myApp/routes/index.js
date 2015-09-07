@@ -26,9 +26,28 @@ router.get('/', function(req, res, next) {
     ];
     res.render('index', { data:data });
 });
+/* GET list page. */
+router.get('/list',function(req, res, next) {
+    var data = [
+        { id:1, src:"/images/bot.jpg" },
+        { id:2, src:"/images/bot.jpg" },
+        { id:3, src:"/images/bot.jpg" },
+        { id:4, src:"/images/bot.jpg" },
+        { id:5, src:"/images/bot.jpg" },
+        { id:6, src:"/images/bot.jpg" },
+        { id:7, src:"/images/bot.jpg" },
+        { id:8, src:"/images/bot.jpg" },
+        { id:1, src:"/images/bot.jpg" },
+        { id:2, src:"/images/bot.jpg" },
+        { id:3, src:"/images/bot.jpg" },
+        { id:4, src:"/images/bot.jpg" },
+        { id:5, src:"/images/bot.jpg" },
+        { id:6, src:"/images/bot.jpg" },
+        { id:7, src:"/images/bot.jpg" },
+        { id:8, src:"/images/bot.jpg" }
+    ];
 
-router.get('/',function(req, res, next) {
-    res.render('',{});
+    res.render('list',{ data:data });
 });
 
 router.get('/',function(req, res, next) {
