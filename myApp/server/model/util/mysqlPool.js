@@ -1,6 +1,3 @@
-/**
- * Created by chy on 15-8-20.
- */
 var mysql = require('mysql');
 var async = require('async');
 var mysqlConf = require('../../../configuration').mysql;

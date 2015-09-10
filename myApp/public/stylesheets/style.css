@@ -21,6 +21,27 @@ figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, t
 /*#header .headnav .nav ul a li{width: 100%;height: 100%;border:1px solid black;float:left;text-align: center;text-decoration: none;}*/
 /*#header .headnav .nav ul a li:hover{background-color: #ffffff;}*/
 
+.transitioned {
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    -ms-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-animation-duration: 1000ms;
+    -moz-animation-duration: 1000ms;
+    -ms-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
 #main {width: 100%;}
 #main #content {width: 100%;height: auto;}
 #main #content ul{display: block;width: 100%;}

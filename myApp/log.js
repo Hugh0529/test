@@ -1,6 +1,3 @@
-/**
- * Created by chy on 15-9-4.
- */
 var log4js = require("log4js");
 var log4jsConf = require("./configuration").log4js;
 

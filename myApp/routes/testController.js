@@ -1,6 +1,3 @@
-/**
- * Created by chy on 15-8-20.
- */
 var express = require('express');
 var router = express.Router();
 var testService = require("../server/service/testService");

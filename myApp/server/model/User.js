@@ -1,6 +1,3 @@
-/**
- * Created by chy on 15-8-26.
- */
 function User(user) {
     var id = user?user.id : null,
         name = user?user.name : null,

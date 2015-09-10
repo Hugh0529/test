@@ -1,6 +1,3 @@
-/**
- * Created by chy on 15-8-29.
- */
 module.exports = {
     mysql : {
         host: 'localhost',
